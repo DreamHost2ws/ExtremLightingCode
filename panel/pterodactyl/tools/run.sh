@@ -77,7 +77,7 @@ tools_menu() {
                 pause ;;
             4) 
                 echo -e "\n${YELLOW}Running Cloudflare Script...${NC}"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/tools/cloudflare.sh) 
+                bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/pterodactyl/tools/cloudflare.sh)
                 pause ;;
             5) 
                 echo -e "\n${YELLOW}Fetching System Info...${NC}"
