@@ -80,7 +80,7 @@ while true; do
                 systemctl restart wings
                 
                 echo -e "${GREEN}>> Fetching Manager...${NC}"
-                bash <(curl -fsSL https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/wings/Manag)
+                bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/wings/Manag)
             fi
             
             echo ""
