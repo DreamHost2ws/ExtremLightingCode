@@ -68,7 +68,7 @@ while true; do
     render_ui
     read -r opt
     case $opt in
-        1) bash <(curl -s https://github.com/DreamHost2ws/ExtremLightingCode/main/run.sh) ;;
+        1) bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/run.sh) ;;
         2) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/panel/run.sh) ;;
         3) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/wings/run.sh) ;;
         4) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/tools/run.sh) ;;
