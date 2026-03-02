@@ -1,0 +1,85 @@
+#!/bin/bash
+# ===========================================================
+# LIGHTPLAYS CONTROL - OBSIDIAN NEXT GEN (v11.2)
+# Style: Segmented UI / Glass-Look / LightPlays Edition
+# ===========================================================
+
+# --- PRECISE COLORS ---
+B_BLUE='\033[1;38;5;33m'
+B_CYAN='\033[1;38;5;51m'
+B_PURPLE='\033[1;38;5;141m'
+B_GREEN='\033[1;38;5;82m'
+B_RED='\033[1;38;5;196m'
+GOLD='\033[38;5;220m'
+W='\033[1;38;5;255m'
+G='\033[0;38;5;244m'
+BG_SHADE='\033[48;5;236m' 
+NC='\033[0m'
+
+# --- REAL-TIME ANALYTICS ---
+get_metrics() {
+    CPU=$(top -bn1 | grep "Cpu(s)" | awk '{printf "%.0f", $2+$4}')
+    RAM=$(free | grep Mem | awk '{printf "%.0f", $3*100/$2}')
+    UPT=$(uptime -p | sed 's/up //')
+    DISK=$(df -h / | awk 'NR==2 {print $5}')
+    CURRENT_HOST=$(hostname)
+}
+
+# --- THE UI RENDERER ---
+render_ui() {
+    clear
+    get_metrics
+    
+    # --- TOP STATUS PILLS ---
+    echo -e " ${B_BLUE}${NC}${BG_SHADE}${W}   HOST: $CURRENT_HOST ${NC}${B_BLUE}${NC}  ${B_PURPLE}${NC}${BG_SHADE}${W}   $UPT ${NC}${B_PURPLE}${NC}  ${B_GREEN}${NC}${BG_SHADE}${W}   $DISK ${NC}${B_GREEN}${NC}"
+    echo -e ""
+
+    # --- CUSTOM LARGE BANNER ---
+    echo -e "${B_CYAN}██╗     ██╗ ██████╗ ██╗  ██╗████████╗██████╗ ██╗      █████╗ ██╗   ██╗███████╗${NC}"
+    echo -e "${B_CYAN}██║     ██║██╔════╝ ██║  ██║╚══██╔══╝██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝██╔════╝${NC}"
+    echo -e "${B_PURPLE}██║     ██║██║  ███╗███████║   ██║   ██████╔╝██║     ███████║ ╚████╔╝ ███████╗${NC}"
+    echo -e "${B_PURPLE}██║     ██║██║   ██║██╔══██║   ██║   ██╔═══╝ ██║     ██╔══██║  ╚██╔╝  ╚════██║${NC}"
+    echo -e "${GOLD}███████╗██║╚██████╔╝██║  ██║   ██║   ██║     ███████╗██║  ██║   ██║   ███████║${NC}"
+    echo -e "${GOLD}╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝${NC}"
+    
+    echo -e "  ${G}───────────────────────────────────────────────────────────────────────────${NC}"
+    
+    # --- DASHBOARD CORE ---
+    echo -e "  ${W}System Health:${NC}"
+    printf "  ${G}CPU:${NC} ${B_CYAN}%-4s${NC} ${G}RAM:${NC} ${B_PURPLE}%-4s${NC} ${G}Network:${NC} ${B_GREEN}CONNECTED${NC}\n" "$CPU%" "$RAM%"
+    echo -e ""
+
+    # --- ACTION GRID ---
+    echo -e "  ${B_CYAN}  DEPLOYMENT SERVICES${NC}"
+    echo -e "  ${G}├─ ${W}[1]${NC} Setup VPS Environment      ${G}├─ ${W}[5]${NC} Theme Configurator"
+    echo -e "  ${G}├─ ${W}[2]${NC} Pterodactyl Panel          ${G}├─ ${W}[6]${NC} System Optimizer"
+    echo -e "  ${G}└─ ${W}[3]${NC} Install Wings Node         ${G}└─ ${W}[7]${NC} No-KVM Virtualization"
+    echo -e ""
+    
+    echo -e "  ${B_PURPLE}  MAINTENANCE${NC}"
+    echo -e "  ${G}└─ ${W}[4]${NC} Utility Toolbox            ${B_RED}${NC}${BG_SHADE}${W} [8] SHUTDOWN ${NC}${B_RED}${NC}"
+    
+    echo -e "\n  ${G}───────────────────────────────────────────────────────────────────────────${NC}"
+    echo -ne "  ${B_CYAN}➜${NC} ${W}Command${NC} ${G}(1-8):${NC} "
+}
+
+# --- CONTROLLER ---
+while true; do
+    render_ui
+    read -r opt
+    case $opt in
+        1) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/vps/run.sh) ;;
+        2) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/panel/run.sh) ;;
+        3) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/wings/run.sh) ;;
+        4) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/tools/run.sh) ;;
+        5) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/thame/chang/dev.sh) ;;
+        6) bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/menu/System1.sh) ;;
+        7) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/no-kvm/run.sh) ;;
+        8|exit)
+            echo -e "\n  ${B_RED}DISCONNECTED.${NC} Goodbye, LightPlays."
+            exit 0 ;;
+        *)
+            echo -e "  ${B_RED}Error: Input Invalid!${NC}"
+            sleep 0.5 ;;
+    esac
+done
