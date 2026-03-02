@@ -69,7 +69,7 @@ tools_menu() {
                 pause ;;
             2) 
                 echo -e "\n${YELLOW}Running Tailscale Installer...${NC}"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/tools/tailscale.sh) 
+                bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/pterodactyl/tools/tailscale.sh) 
                 pause ;;
             3) 
                 echo -e "\n${YELLOW}Running Zerotier Installer...${NC}"
