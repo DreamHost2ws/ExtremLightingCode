@@ -81,7 +81,7 @@ tools_menu() {
                 pause ;;
             5) 
                 echo -e "\n${YELLOW}Fetching System Info...${NC}"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/tools/info.sh) 
+                bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/pterodactyl/tools/info.sh)
                 pause ;;
             6) 
                 echo -e "\n${YELLOW}Running tcp Optimizer...${NC}"
