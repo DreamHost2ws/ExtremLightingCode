@@ -112,7 +112,7 @@ while true; do
     1) blueprint1 ;;
     2) blueprint2 ;;
     3) autofix ;;
-    4) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/thame/hyperv1.sh) ;;
+    4) bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/pterodactyl/hyperv1.sh) ;;
     0) 
        echo -e "\n${M} 👋 Exiting... Panel shant ho gaya.${N}"
        sleep 0.5
