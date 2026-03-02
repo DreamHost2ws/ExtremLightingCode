@@ -45,7 +45,7 @@ execute_script() {
 while true; do
     clear
     echo -e "${B_CYAN}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}"
-    echo -e "${B_CYAN}┃${NC}  ${B_GREEN}🚀 NOBITA CONTROL CENTER v10.0${NC}         ${B_CYAN}┃${NC}"
+    echo -e "${B_CYAN}┃${NC}  ${B_GREEN}🚀 Lighting CONTROL CENTER v1.00${NC}         ${B_CYAN}┃${NC}"
     echo -e "${B_CYAN}┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫${NC}"
     echo -e "${B_CYAN}┃${NC} [1] Cockpit    ➔ $(get_docker_status "cockpit")"
     echo -e "${B_CYAN}┃${NC} [2] SSH WAB    ➔ $(get_docker_status "shellngn")"
@@ -55,7 +55,7 @@ while true; do
     echo -e "${B_CYAN}┃${NC} [6] Tocaltonet ➔ $(get_docker_status "localtonet")"
     echo -e "${B_CYAN}┃${NC} [7] ${B_RED}EXIT SYSTEM${NC}"
     echo -e "${B_CYAN}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${NC}"
-    echo -ne "${B_YELLOW}Option select karein >> ${NC}"
+    echo -ne "${B_YELLOW}Seclect Option >> ${NC}"
     read -r choice
 
     case $choice in
