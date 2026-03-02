@@ -16,7 +16,7 @@ read -p "👉 Choose option [1-2]: " ACTION
 if [ "$ACTION" == "1" ]; then
     echo ""
     echo "😌 Install mode selected."
-    bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/panel/Dashboard-v4.sh)
+    bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/Dashboard-v4.sh)
     echo "Nothing to install. Silence is golden ✨"
     echo "Exiting peacefully..."
     exit 0
