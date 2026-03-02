@@ -43,7 +43,7 @@ install_panel() {
     header
     echo -e "\n${G} [ INSTALLATION MODE ] ${N}"
     echo -e " ${W}Starting Jexactyl Installation/Update process...${N}\n"
-    bash <(curl -fsSL https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/panel/Jexactyl/install.sh)
+    bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/Jexactyl/install.sh)
     echo -e " ${Y}⚠ No command configured yet. Add script in 'install_panel' function.${N}"
     pause
 }
