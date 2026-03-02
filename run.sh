@@ -66,7 +66,7 @@ panel_menu() {
         
         case $p_opt in
             1) echo -e "\n  ${B_BLUE}➜ Installing Cockpit...${NC}"
-               bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/vps/panel/cockpit.sh); pause ;;
+               bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/cockpit.sh); pause ;;
             2) echo -e "\n  ${B_BLUE}➜ Installing CasaOS...${NC}"
                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/vps/panel/casaos.sh); pause ;;
             3) echo -e "\n  ${B_BLUE}➜ Installing 1Panel...${NC}"
