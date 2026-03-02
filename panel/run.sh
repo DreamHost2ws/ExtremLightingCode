@@ -66,7 +66,7 @@ panel_menu() {
                 bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/unFEATHERPANEL.sh) 
                 pause ;;
             2) 
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/panel/pterodactyl/run.sh) 
+                bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/pterodactyl/run.sh)
                 pause ;;
             3) 
                 bash <(curl -fsSL https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/panel/Jexactyl/run.sh)
