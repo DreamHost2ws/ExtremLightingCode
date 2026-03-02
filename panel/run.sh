@@ -78,7 +78,7 @@ panel_menu() {
                 bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/undash-3.sh)
                 pause ;;
             6) 
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/Uninstall/dash-v4.sh) 
+                bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/dash-v4.sh) 
                 pause ;;
             7) 
                 bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/Uninstall/unPaymenter.sh) 
