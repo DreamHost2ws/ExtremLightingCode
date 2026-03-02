@@ -93,7 +93,7 @@ tools_menu() {
                 pause ;;
             8) 
                 echo -e "\n${YELLOW}Installing RDP...${NC}"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/tools/rdp.sh) 
+                bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/pterodactyl/tools/rdp.sh)
                 pause ;;
             0) 
                 break ;;
