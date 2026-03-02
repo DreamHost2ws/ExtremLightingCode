@@ -160,7 +160,7 @@ EOF
         3) bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/auto.sh)
            bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/vm-2.sh); pause ;;
         4) panel_menu ;;
-        5) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/vps/lxc.sh); pause ;;
+        5) bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/lxc.sh); pause ;;
         6) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/vps/Docker.sh); pause ;;
         0) echo -e "\n  ${B_RED}Terminating session...${NC} Goodbye, Nobita."; exit 0 ;;
         *) echo -e "  ${B_RED}Error: Input not valid.${NC}"; sleep 0.7 ;;
