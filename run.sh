@@ -68,7 +68,7 @@ panel_menu() {
             1) echo -e "\n  ${B_BLUE}➜ Installing Cockpit...${NC}"
                bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/cockpit.sh); pause ;;
             2) echo -e "\n  ${B_BLUE}➜ Installing CasaOS...${NC}"
-               bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/vps/panel/casaos.sh); pause ;;
+               bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/casaos.sh); pause ;;
             3) echo -e "\n  ${B_BLUE}➜ Installing 1Panel...${NC}"
                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/vps/panel/1panel.sh); pause ;;
             0) break ;;
