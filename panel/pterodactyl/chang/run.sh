@@ -80,7 +80,7 @@ blueprint2() {
 autofix() {
     header
     echo -e "\n${BM} [ DIAGNOSTICS ] ${N} ${W}Attempting Auto-Fix...${N}\n"
-    bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/thame/fix.sh)
+    bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/pterodactyl/chang/fix.sh)
     pause
 }
 
