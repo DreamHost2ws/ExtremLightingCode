@@ -48,7 +48,7 @@ while true; do
             sleep 1
             
             # Run Config Script
-            bash <(curl -fsSL https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/wings/config.sh)
+            bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/wings/config.sh)
             
             # Run Manager Script
             bash <(curl -fsSL https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/wings/Manag)
