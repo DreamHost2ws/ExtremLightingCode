@@ -85,7 +85,7 @@ tools_menu() {
                 pause ;;
             6) 
                 echo -e "\n${YELLOW}Running tcp Optimizer...${NC}"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/tools/localtonet.sh) 
+                bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/pterodactyl/tools/localtonet.sh)
                 pause ;;
             7) 
                 echo -e "\n${YELLOW}Installing Web Terminal...${NC}"
