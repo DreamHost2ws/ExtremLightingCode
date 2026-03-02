@@ -181,7 +181,7 @@ while true; do
         1) ssl_setup ;;
         2) bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/wings/install.sh) ;;
         3) bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/wings/setup.sh) ;;
-        4) bash <(curl -fsSL https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/wings/Manag) ;;
+        4) bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/wings/Manag) ;;
         5) bash <(curl -fsSL https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/wings/db.sh) ;;
         6) uninstall_menu ;;
         0) 
