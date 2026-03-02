@@ -66,7 +66,7 @@ pause() {
 blueprint1() {
   header
   echo -e "\n${BG} [ ACTION STARTED ] ${N} ${W}Running Blueprint 1...${N}\n"
-  bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/thame/blueprint.sh)
+  bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/pterodactyl/chang/blueprint.sh)
   pause
 }
 
