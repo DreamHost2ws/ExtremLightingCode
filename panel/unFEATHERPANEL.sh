@@ -28,7 +28,7 @@ pause() {
 install_panel() {
   echo -e "${BLUE}▶▶ Starting FeatherPanel INSTALL${NC}"
   sleep 1
-  bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/panel/tool/FeatherPanel.sh)
+  bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/FeatherPanel.sh)
 }
 
 uninstall_panel() {
