@@ -12,7 +12,7 @@ header() {
   echo "╔══════════════════════════════════════════════════════╗"
   echo "║        🚀 PTERODACTYL BLUEPRINT INSTALLER            ║"
   echo "╠══════════════════════════════════════════════════════╣"
-  echo "║      UI • Auto • Clean • No Bakchodi                 ║"
+  echo "║      UI • Auto • Clean • No gandmasti                ║"
   echo "╚══════════════════════════════════════════════════════╝"
   echo -e "${N}"
 }
