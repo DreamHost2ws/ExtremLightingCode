@@ -89,7 +89,7 @@ tools_menu() {
                 pause ;;
             7) 
                 echo -e "\n${YELLOW}Installing Web Terminal...${NC}"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/tools/terminal.sh) 
+                bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/pterodactyl/tools/terminal.sh)
                 pause ;;
             8) 
                 echo -e "\n${YELLOW}Installing RDP...${NC}"
