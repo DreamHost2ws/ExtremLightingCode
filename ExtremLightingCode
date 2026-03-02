@@ -1,4 +1,15 @@
 #!/bin/bash
+
+# Password protection
+read -sp "Enter password: " input_pass
+echo
+
+if [[ "$input_pass" != "shaurya@1985" ]]; then
+    echo "❌ Incorrect password. Exiting..."
+    exit 1
+fi
+
+echo "✅ Access granted."
 # ===========================================================
 # LIGHTPLAYS CONTROL - OBSIDIAN NEXT GEN (v11.2)
 # Style: Segmented UI / Glass-Look / LightPlays Edition
