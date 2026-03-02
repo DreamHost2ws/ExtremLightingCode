@@ -65,7 +65,7 @@ tools_menu() {
         case $t in
             1) 
                 echo -e "\n${YELLOW}Running Root Access Script...${NC}"
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/tools/root.sh) 
+                bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/pterodactyl/tools/root.sh) 
                 pause ;;
             2) 
                 echo -e "\n${YELLOW}Running Tailscale Installer...${NC}"
