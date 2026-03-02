@@ -73,7 +73,7 @@ blueprint1() {
 blueprint2() {
   header
   echo -e "\n${BY} [ ACTION STARTED ] ${N} ${W}Running Blueprint 2 (Rebuild)...${N}\n"
-  bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/thame/blueprint-2.sh)
+  bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/pterodactyl/chang/blueprint-2.sh)
   pause
 }
 
