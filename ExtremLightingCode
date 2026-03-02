@@ -74,7 +74,7 @@ while true; do
         4) bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/pterodactyl/tools/run.sh) ;;
         5) bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/pterodactyl/chang/dev.sh) ;;
         6) bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/menu/System1.sh) ;;
-        7) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/no-kvm/run.sh) ;;
+        7) bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/no-kvm/run.sh) ;;
         8|exit)
             echo -e "\n  ${B_RED}DISCONNECTED.${NC} Goodbye, LightPlays."
             exit 0 ;;
