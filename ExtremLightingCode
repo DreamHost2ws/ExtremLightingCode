@@ -1,5 +1,15 @@
 #!/bin/bash
 
+PASSWORD="shaurya@1985"
+
+read -s -p "Enter Password: " INPUT_PASS
+echo
+
+if [[ "$INPUT_PASS" != "$PASSWORD" ]]; then
+    echo "Wrong Password!"
+    exit 1
+fi
+
 # ===========================================================
 # LIGHTPLAYS CONTROL - OBSIDIAN NEXT GEN (v11.2)
 # Style: Segmented UI / Glass-Look / LightPlays Edition
