@@ -1,0 +1,93 @@
+#!/bin/bash
+
+# ==============================
+# 🎨 COLORS & STYLING
+# ==============================
+R="\e[31m"; G="\e[32m"; Y="\e[33m"; B="\e[34m"; M="\e[35m"; C="\e[36m"
+W="\e[97m"; N="\e[0m"; BOLD="\e[1m"; DIM="\e[2m"
+
+SERVICE="wings"
+
+# ==============================
+# 🔍 STATUS CHECKER
+# ==============================
+get_status() {
+    if systemctl is-active --quiet $SERVICE; then
+        echo -e "${G}● ACTIVE${N}"
+    else
+        echo -e "${R}○ INACTIVE${N}"
+    fi
+}
+
+# ==============================
+# 📺 UI REFRESHED MENU
+# ==============================
+while true; do
+    clear
+    STATUS=$(get_status)
+    UPTIME=$(systemctl show -p ActiveEnterTimestamp $SERVICE | cut -d'=' -f2)
+
+    echo -e "${C}╭────────────────────────────────────────────────╮${N}"
+    echo -e "${C}│${N}  ${BOLD}🪽  WINGS CONTROL CENTER${N}                   ${C}│${N}"
+    echo -e "${C}├────────────────────────────────────────────────┤${N}"
+    echo -e "${C}│${N}  Status: ${STATUS}                                ${C}│${N}"
+    echo -e "${C}│${N}  Since:  ${DIM}${UPTIME:-N/A}${N}                ${C}│${N}"
+    echo -e "${C}╰────────────────────────────────────────────────╯${N}"
+    echo
+    echo -e "  ${C}[1]${N} ${BOLD}Start${N}     ${DIM}Launch the service${N}"
+    echo -e "  ${C}[2]${N} ${BOLD}Restart${N}   ${DIM}Quick reload${N}"
+    echo -e "  ${C}[3]${N} ${BOLD}Stop${N}      ${DIM}Shut down service${N}"
+    echo -e "  ${M}───────────────${N}"
+    echo -e "  ${C}[4]${N} ${BOLD}Status${N}    ${DIM}Full systemctl output${N}"
+    echo -e "  ${C}[5]${N} ${BOLD}Logs${N}      ${DIM}Real-time journal stream${N}"
+    echo -e "  ${C}[6]${N} ${BOLD}Debug${N}     ${DIM}Run 'sudo wings' directly${N}"
+    echo -e "  ${M}───────────────${N}"
+    echo -e "  ${R}[0]${N} ${BOLD}Exit${N}      ${DIM}Close manager${N}"
+    echo
+    echo -ne "  ${BOLD}Action:${N} "
+    read -r choice
+
+    case $choice in
+        1)
+            echo -e "\n${G}⏳ Starting Wings...${N}"
+            sudo systemctl start $SERVICE
+            sleep 1.5
+            ;;
+        2)
+            echo -e "\n${C}♻ Restarting Wings...${N}"
+            sudo systemctl restart $SERVICE
+            sleep 1.5
+            ;;
+        3)
+            echo -e "\n${R}🛑 Stopping Wings...${N}"
+            sudo systemctl stop $SERVICE
+            sleep 1.5
+            ;;
+        4)
+            echo -e "\n${B}📋 System Status:${N}"
+            systemctl status $SERVICE --no-pager
+            echo
+            read -p "Press [Enter] to return..."
+            ;;
+        5)
+            echo -e "\n${Y}📜 Streaming Logs (Ctrl+C to stop)...${N}"
+            journalctl -u $SERVICE -f
+            ;;
+        6)
+            echo -e "\n${R}⚠️  ENTERING DEBUG MODE${N}"
+            echo -e "Stopping background service first..."
+            sudo systemctl stop $SERVICE
+            echo -e "${C}▶ Running: sudo wings${N}\n"
+            sudo wings
+            read -p "Press [Enter] to return to menu..."
+            ;;
+        0)
+            echo -e "\n${Y}👋 Goodbye!${N}"
+            exit 0
+            ;;
+        *)
+            echo -e "\n${R}❌ Invalid choice.${N}"
+            sleep 1
+            ;;
+    esac
+done
