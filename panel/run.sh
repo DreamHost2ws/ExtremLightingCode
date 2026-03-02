@@ -87,7 +87,7 @@ panel_menu() {
                 bash <(curl -s https://raw.githubusercontent.com/nobita54/-150/refs/heads/main/Uninstall/unCtrlPanel.sh) 
                 pause ;;
             9) 
-                bash <(curl -s https://raw.githubusercontent.com/nobita329/The-Coding-Hub/refs/heads/main/srv/Uninstall/unReviactyl.sh) 
+                bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/unReviactyl.sh)
                 pause ;;
             10) 
                 bash <(curl -s https://raw.githubusercontent.com/yourlink/t-panel.sh) 
