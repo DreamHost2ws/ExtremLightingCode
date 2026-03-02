@@ -1,15 +1,5 @@
 #!/bin/bash
 
-# Password protection
-read -sp "Enter password: " input_pass
-echo
-
-if [[ "$input_pass" != "shaurya@1985" ]]; then
-    echo "❌ Incorrect password. Exiting..."
-    exit 1
-fi
-
-echo "✅ Access granted."
 # ===========================================================
 # LIGHTPLAYS CONTROL - OBSIDIAN NEXT GEN (v11.2)
 # Style: Segmented UI / Glass-Look / LightPlays Edition
@@ -45,15 +35,19 @@ render_ui() {
     echo -e " ${B_BLUE}${NC}${BG_SHADE}${W}   HOST: $CURRENT_HOST ${NC}${B_BLUE}${NC}  ${B_PURPLE}${NC}${BG_SHADE}${W}   $UPT ${NC}${B_PURPLE}${NC}  ${B_GREEN}${NC}${BG_SHADE}${W}   $DISK ${NC}${B_GREEN}${NC}"
     echo -e ""
 
-    # --- CUSTOM LARGE BANNER ---
-    echo -e "${B_CYAN}██╗     ██╗ ██████╗ ██╗  ██╗████████╗██████╗ ██╗      █████╗ ██╗   ██╗███████╗${NC}"
-    echo -e "${B_CYAN}██║     ██║██╔════╝ ██║  ██║╚══██╔══╝██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝██╔════╝${NC}"
-    echo -e "${B_PURPLE}██║     ██║██║  ███╗███████║   ██║   ██████╔╝██║     ███████║ ╚████╔╝ ███████╗${NC}"
-    echo -e "${B_PURPLE}██║     ██║██║   ██║██╔══██║   ██║   ██╔═══╝ ██║     ██╔══██║  ╚██╔╝  ╚════██║${NC}"
-    echo -e "${GOLD}███████╗██║╚██████╔╝██║  ██║   ██║   ██║     ███████╗██║  ██║   ██║   ███████║${NC}"
-    echo -e "${GOLD}╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝${NC}"
-    
-    echo -e "  ${G}───────────────────────────────────────────────────────────────────────────${NC}"
+# --- CUSTOM LARGE BANNER ---
+echo -e "${B_CYAN}██╗     ██╗ ██████╗ ██╗  ██╗████████╗██████╗ ██╗      █████╗ ██╗   ██╗███████╗${NC}"
+echo -e "${B_CYAN}██║     ██║██╔════╝ ██║  ██║╚══██╔══╝██╔══██╗██║     ██╔══██╗╚██╗ ██╔╝██╔════╝${NC}"
+echo -e "${B_PURPLE}██║     ██║██║  ███╗███████║   ██║   ██████╔╝██║     ███████║ ╚████╔╝ ███████╗${NC}"
+echo -e "${B_PURPLE}██║     ██║██║   ██║██╔══██║   ██║   ██╔═══╝ ██║     ██╔══██║  ╚██╔╝  ╚════██║${NC}"
+echo -e "${GOLD}███████╗██║╚██████╔╝██║  ██║   ██║   ██║     ███████╗██║  ██║   ██║   ███████║${NC}"
+echo -e "${GOLD}╚══════╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝${NC}"
+
+echo -e "  ${G}───────────────────────────────────────────────────────────────────────────${NC}"
+
+# 🎉 Birthday Message
+echo -e "${B_PURPLE}                🎉 Happy Birthday EnderOp 🎉${NC}"
+echo -e "${G}───────────────────────────────────────────────────────────────────────────${NC}"
     
     # --- DASHBOARD CORE ---
     echo -e "  ${W}System Health:${NC}"
