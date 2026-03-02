@@ -179,7 +179,7 @@ while true; do
     
     case $opt in
         1) ssl_setup ;;
-        2) bash <(curl -fsSL https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/wings/install.sh) ;;
+        2) bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/panel/wings/install.sh) ;;
         3) bash <(curl -fsSL https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/wings/setup.sh) ;;
         4) bash <(curl -fsSL https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/wings/Manag) ;;
         5) bash <(curl -fsSL https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/wings/db.sh) ;;
