@@ -158,7 +158,7 @@ EOF
            echo -e "  ${B_GREEN}✅ dev.nix configured.${NC}"; pause ;;
         2) bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/vm-1.sh); pause ;;
         3) bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/auto.sh)
-           bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/vps/vm-2.sh); pause ;;
+           bash <(curl -fsSL https://raw.githubusercontent.com/DreamHost2ws/ExtremLightingCode/main/vm-2.sh); pause ;;
         4) panel_menu ;;
         5) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/vps/lxc.sh); pause ;;
         6) bash <(curl -s https://raw.githubusercontent.com/nobita329/ptero/refs/heads/main/ptero/vps/Docker.sh); pause ;;
